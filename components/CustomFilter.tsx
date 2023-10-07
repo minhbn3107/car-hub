@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Listbox, Transition } from "@headlessui/react";
 
 export default function CustomFilter({
-    title,
     options,
     setFilter,
 }: CustomFilterProps) {

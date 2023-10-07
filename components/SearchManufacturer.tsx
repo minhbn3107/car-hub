@@ -50,7 +50,7 @@ export default function SearchManufacturer({
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery("")}
                     >
-                        <Combobox.Options>
+                        <Combobox.Options className="search-manufacturer__options">
                             {filteredManufacturer.map((item) => (
                                 <Combobox.Option
                                     key={item}
@@ -63,7 +63,7 @@ export default function SearchManufacturer({
                                     }
                                     value={item}
                                 >
-                                    {({ selected, active }) => (
+                                    {({ selected }) => (
                                         <>
                                             <span
                                                 className={`block truncate ${
@@ -74,17 +74,6 @@ export default function SearchManufacturer({
                                             >
                                                 {item}
                                             </span>
-
-                                            {/* Show an active blue background color if the option is selected */}
-                                            {selected ? (
-                                                <span
-                                                    className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                                                        active
-                                                            ? "text-white"
-                                                            : "text-pribg-primary-purple"
-                                                    }`}
-                                                ></span>
-                                            ) : null}
                                         </>
                                     )}
                                 </Combobox.Option>
